@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="false">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="false">
+        <EditText android:id="@+id/edit_message"
+            android:layout_width="300px"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="250px"
+            android:layout_height="wrap_content"
+            android:entries="@array/planets" />
+        <Button
+            android:layout_width="200px"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate" />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="false">
+        <TextView
+            android:padding="10px"
+            android:id="@+id/ages_days"
+            android:text="0\n0\n0\n0\n0\n0\n0\n0\n"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:padding="10px"
+            android:text="days\ndays\ndays\ndays\ndays\ndays\ndays\ndays"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="125px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:padding="10px"
+            android:text="on Mercury\non Venus\non Earth\non Mars\non Jupiter\non Saturn\non Neptune\non Uranus"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="250px"
+            android:layout_height="fill_parent"
+            />
+
+    </LinearLayout>
+</LinearLayout>
