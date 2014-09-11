@@ -30,7 +30,7 @@ public class Calculator extends Activity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
-        setUpSpinner();
+
     }
 
     public void setUpSpinner() {
@@ -39,6 +39,13 @@ public class Calculator extends Activity {
                 R.array.planets, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+    }
+
+    /* Calculate years on planet 1 to years on planet2 */
+    public double convert(double years, int planet1, int planet2) {
+        double[] planet_years = {0.2415, 0.6717, 1, 1.8859, 11.862, 29.456, 84.07, 164.81};
+        double age = years * (planet_years[planet1]/planet_years[planet2]);
+        return age;
     }
 
     @Override
